@@ -23,7 +23,6 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1.25em; 
 }
 
 ul {
@@ -33,7 +32,6 @@ ul {
 nav ul li {
     display: inline;
     margin: 0 15px;
-    font-size: 1.25em; 
 }
 
 nav ul li a {
