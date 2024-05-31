@@ -1,0 +1,147 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #004d40;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1.25em; 
+}
+
+ul {
+    font-size: 1.25em; 
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+    font-size: 1.25em; 
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: justify; /* Justificar el texto */
+}
+
+section h2 {
+    color: #004d40;
+    border-bottom: 2px solid #004d40;
+    padding-bottom: 0.5em;
+    margin-bottom: 1em;
+    font-size: 2em;
+    text-align: center;
+}
+
+.intro-image {
+    display: block;
+    margin: 0 auto 1em auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+footer {
+    background-color: #004d40;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.9em;
+}
+
+.grafico-container {
+    margin-bottom: 2em;
+}
+
+.grafico {
+    background-color: #e0f7fa;
+    border: 1px solid #004d40;
+    border-radius: 8px;
+    padding: 1em;
+    height: 400px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+    color: #004d40;
+}
+
+#grafico2, #grafico4 {
+    height: 600px; 
+    width: 100%;
+    position: relative;
+}
+
+.leaflet-bottom .legend {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    line-height: 1.5em;
+    color: #333;
+}
+
+.custom-hr {
+    border: 0;
+    border-top: 2px solid #004d40;
+    margin: 1em 0;
+}
+
+.grafico h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #004d40;
+}
+
+#grafico3 {
+    height: 550px; 
+    width: 100%;
+    position: relative;
+    background-color: white;
+}
+
+p {
+    font-size: 1.25em; 
+}
+
+.cta-message {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}

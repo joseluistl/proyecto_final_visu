@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto de Visualización de Accidentes de Tráfico en CDMX</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Accidentes de Tráfico en la Ciudad de México</h1>
+        <nav>
+            <ul>
+                <li><a href="#introduccion">Introducción</a></li>
+                <li><a href="#aed">Análisis de Datos</a></li>
+                <li><a href="#desarrollo">Desarrollo</a></li>
+                <li><a href="#resultados">Resultados</a></li>
+                <li><a href="#conclusiones">Conclusiones</a></li>
+                <li><a href="#reflexion">Reflexión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="introduccion">
+            <h2>Introducción</h2>
+            <img src="trafico1.jpg" alt="Tráfico en la Ciudad de México" class="intro-image">
+            <hr class="custom-hr">
+            <p>En la <b>Ciudad de México</b>, según la Secretaría de Movilidad, ocurren en promedio <i>37.6 incidentes de tránsito diarios</i>, resultando en la <b>muerte de una o dos personas cada día </b>. Esta situación afecta significativamente a toda la sociedad y la mayoría de estos <b>incidentes son prevenibles</b> y pueden ser menos graves.</p>
+            <p>La seguridad vial es una responsabilidad compartida, pero los incidentes afectan principalmente a los usuarios más vulnerables, como peatones y ciclistas. Estas personas enfrentan barreras que limitan su seguridad en una ciudad que debería ser accesible e inclusiva. Por ello, las políticas de movilidad deben priorizar su protección y bienestar.</p>
+            <p>Es fundamental que las políticas de seguridad vial promuevan la conciencia, el respeto y la tolerancia hacia todos los usuarios de la vía. La convivencia vial debe fomentar conductas ordenadas y respetuosas, permitiendo la resolución pacífica de tensiones entre diferentes modos de transporte.</p>
+            <p>Diariamente, en la Ciudad de México, los <i>automóviles están involucrados en el 48.5% de los incidentes de tránsito</i>, a pesar de representar solo el 22% de los viajes diarios. Las <i>motocicletas</i>, que han crecido significativamente en número, están <i>involucradas en el 32.8% de los incidentes</i>, con una alta tasa de participación relativa a su uso. Los motociclistas tienen una probabilidad mucho mayor de sufrir incidentes en comparación con los ciclistas, automovilistas y usuarios de transporte público.</p>
+            <p>Las principales causas de accidentes viales incluyen tres factores clave:</p>
+            <ul>
+                <li><strong>Infraestructura y programas:</strong> Han favorecido a los vehículos automotores, <i>sin considerar a peatones y ciclistas</i>, aumentando su riesgo.</li>
+                <li><strong>Infracciones al Reglamento de Tránsito:</strong> Muchas infracciones como el exceso de velocidad, el uso de celulares y la conducción bajo el alcohol son comunes en accidentes, especialmente de noche y en fines de semana. En 2019, el 91.5% de las multas fueron por exceso de velocidad (SEMOVI, 2019).</li>
+                <li><strong>Dispersión de responsabilidades:</strong> La dispersión de responsabilidades en varias secretarías e instituciones ha dificultado la coordinación de las políticas de seguridad vial, con la SEMOVI y la SSC como principales, pero no únicas, responsables.</li>
+            </ul>
+            <p>A continuación se muestra un gráfico mostrando los accidentes más comunes en la Ciudad de México:</p>
+            <div class="grafico" id="grafico2"><!-- Espacio para Gráfico 2 --></div>
+        </section>
+        
+
+        <section id="aed">
+            <h2 style="text-align: center;">Análisis Exploratorio de Datos (AED)</h2>
+            <p><!-- Espacio para la descripción del AED --></p>
+            <div class="grafico-container">
+                <h3 style="text-align: center;">Tipos de Accidentes en la Ciudad de México</h3>
+                <div class="grafico" id="grafico3"><!-- Espacio para Gráfico 3 --></div>
+            </div>
+        </section>
+
+        <section id="desarrollo">
+            <h2>Contexto en otras ciudades</h2>
+            <p>Varias ciudades similares a la Ciudad de México han implementado estrategias efectivas para enfrentar problemáticas relacionadas con la infraestructura vial, infracciones de tránsito y la coordinación institucional:</p>
+            <ul>
+                <li><strong>São Paulo:</strong> La reducción de límites de velocidad en avenidas principales y la mejora de la infraestructura para peatones y ciclistas han disminuido la exposición al riesgo de los usuarios vulnerables.</li>
+                <li><strong>Buenos Aires:</strong> Ha adoptado un enfoque integral con su Plan de Seguridad Vial, que incluye controles de alcoholemia y campañas de concienciación, reduciendo significativamente los accidentes.</li>
+                <li><strong>Bogotá:</strong> La creación de zonas de bajas emisiones y el aumento de la vigilancia policial han sido cruciales para mejorar la seguridad vial, mientras que la promoción del uso de bicicletas ha incentivado una movilidad más segura y sostenible.</li>
+                <li><strong>Los Ángeles y Nueva York:</strong> el programa Vision Zero ha sido fundamental en la reducción de accidentes viales. Ambas ciudades han implementado medidas como la reducción de límites de velocidad, el rediseño de intersecciones peligrosas y la aplicación estricta de las leyes de tránsito. Además, han mejorado la coordinación entre diferentes agencias gubernamentales para asegurar una respuesta más eficaz a los incidentes de tránsito.</li>
+            </ul>
+            <p> Estas acciones no solo han disminuido el número de accidentes, sino que también han mejorado la calidad de vida al promover una convivencia vial más segura y respetuosa. La experiencia de estas ciudades demuestra que una combinación de infraestructura adecuada, políticas estrictas y una buena coordinación institucional puede llevar a una significativa reducción de los accidentes viales y a una mayor seguridad para todos los usuarios de la vía.</p>
+        </section>
+
+        <section id="resultados">
+            <h2>Resultados de la Implementación en la Ciudad de México</h2>
+            <p>En la Ciudad de México, se ha implementado un sistema de cámaras de velocidad en puntos estratégicos como parte del programa Fotocívicas. Esta medida ha tenido un impacto significativo en la reducción de accidentes.</p>
+            <ul>
+                <li><strong>Reducción de Accidentes:</strong> Según un estudio de Alcaraz y Anaya (2024), la instalación de cámaras de velocidad ha reducido los accidentes en un 16%.</li>
+                <li><strong>Comparación con Otros Estudios:</strong> Estos resultados son consistentes con investigaciones previas realizadas en otras ciudades, como el estudio de Graham y Naik que encontró una reducción del 15%, y el estudio de Al-Masaeid y Mujalli que reportó una reducción del 10-19% en Jordania.</li>
+                <li><strong>Metodología:</strong> El estudio utilizó métodos de matching para asegurar la validez de los resultados, ajustando los datos por ingresos de parquímetros para considerar el volumen de tráfico.</li>
+            </ul>
+            <p>Los resultados indican que la implementación de cámaras de velocidad es una medida efectiva para mejorar la seguridad vial. La evidencia sugiere que una política de expansión de estas cámaras podría seguir reduciendo los accidentes de tránsito en la ciudad.</p>
+            <div class="grafico-container">
+                <h3 style="text-align: center;"> Ubicación de las Cámaras en la Ciudad de México</h3>
+                <div class="grafico" id="grafico4"><!-- Espacio para Gráfico 4 --></div>
+            </div>
+            <div class="call-to-action">
+                <h2 style="text-align: center;"><b>¡Actúa Ahora!</b></h2>
+                <p class="cta-message"><strong><em>Apoya la expansión del programa Fotocívicas y contribuye a una ciudad más segura. Tu voz puede hacer la diferencia en la seguridad vial de nuestra comunidad.</em></strong></p>
+                <img src="fotocivicas.jpg" alt="Tráfico en la Ciudad de México" class="intro-image">
+            </div>
+        </section>
+        
+
+        <section id="impacto-y-perspectivas">
+            <h2>Impacto y Perspectivas Futuras</h2>
+            <p>La seguridad vial en la Ciudad de México es un desafío que demanda acciones integrales y coordinadas. La implementación de cámaras de velocidad ha demostrado ser una medida efectiva para reducir los accidentes, pero es solo una pieza del rompecabezas.</p>
+            <ul>
+                <li><strong>Infraestructura Vial:</strong> Mejorar las calles y avenidas para hacerlas más seguras para todos los usuarios, incluyendo peatones y ciclistas, es fundamental.</li>
+                <li><strong>Campañas de Concienciación:</strong> Promover el respeto y la tolerancia en las vías públicas a través de campañas educativas puede cambiar comportamientos y salvar vidas.</li>
+                <li><strong>Aplicación de Leyes de Tránsito:</strong> Reforzar la aplicación de las leyes existentes y asegurar que las infracciones se sancionen adecuadamente.</li>
+                <li><strong>Movilidad Activa:</strong> Fomentar el uso del transporte público y medios de movilidad activa como la bicicleta para reducir el número de vehículos en las calles y, por ende, los accidentes.</li>
+                <li><strong>Coordinación Interinstitucional:</strong> Mejorar la colaboración entre las distintas autoridades encargadas de la seguridad vial para una respuesta más eficaz a los incidentes.</li>
+            </ul>
+            <p>A lo largo de este proyecto, hemos enfrentado y superado diversos desafíos técnicos y narrativos. Seleccionar los datos más relevantes, diseñar visualizaciones impactantes y estructurar una narrativa coherente han sido tareas cruciales. La integración de distintas herramientas de visualización y la presentación de datos en un formato accesible ha sido una experiencia enriquecedora.</p>
+            <p>Nuestro objetivo es que esta narrativa no solo informe, sino que también inspire a los lectores a tomar acciones concretas para mejorar la seguridad vial en nuestra ciudad. La evidencia es clara: la implementación de cámaras de velocidad, combinada con otras medidas, tiene el potencial de transformar significativamente nuestras vías y salvar vidas.</p>
+            <div class="call-to-action">
+                <h3 style="text-align: center;">¡Involúcrate!</h3>
+                <p>Tu participación es crucial para la seguridad vial de nuestra comunidad. Apoya la expansión del programa Fotocívicas y contribuye a un futuro más seguro para todos.</p>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <p>2024 Proyecto de Visualización de Accidentes de Tráfico en CDMX</p>
+    </footer>
+</body>
+</html>
